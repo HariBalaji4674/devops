@@ -1,0 +1,17 @@
+- name: Check the user are there or not
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: User are there or not
+    command: id /hari
+    register: result
+    ignore_errors: true
+  - name: Printing output
+    debug:
+      msg: "{{result}}"
+    when: result.rc != 0
+  - name: Creating User
+    file:
+      path: ./hari
+      state: directory
+      mode: '0755' 

@@ -1,0 +1,8 @@
+- name: Creating A file in same directory
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: Creating File in DevOps-Own-All\Ansible-RealPractice
+    file: 
+      path: 
+      state: touch

@@ -1,0 +1,12 @@
+- name: Add Several Users
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Printing Loops
+      user:
+        name: "{{item}}"
+        state: present
+        groups: "wheel"
+      loop:
+        - user1
+        - user2

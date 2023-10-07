@@ -1,0 +1,7 @@
+[nginx]
+172.31.47.145
+
+[nginx:vars]
+nginx_NAME: "Peddireddy"
+nginx_COURSE: "DevOps"
+nginx_ID: 12345

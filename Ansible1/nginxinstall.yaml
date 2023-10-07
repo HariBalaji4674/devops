@@ -1,0 +1,12 @@
+- name: Install Nginx and Configure the status
+  hosts: all
+  become: yes
+  tasks:
+  - name: Install Nginx in Control Node 1
+    ansible.builtin.yum:
+      name: nginx
+      state: installed
+  - name: get the status of nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started

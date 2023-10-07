@@ -1,0 +1,12 @@
+- name: Testing Loops
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: Testing Loops
+    debug:
+      msg: "{{item}}"
+    loop:
+      - number1
+      - number2
+      - number3
+      - number4

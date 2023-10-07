@@ -1,0 +1,9 @@
+- name: Taking Variables from Servers
+  hosts: localhost
+  become: yes
+  vars_files:
+  - details.yaml
+  tasks:
+  - name: Printing The varibales from var_files
+    ansible.builtin.debug:
+      msg: "My Name is {{Name}}, I Am in {{Section}}, I am Learing Course {{Course}}, While Doing job {{Job}}, in {{Company}}"
