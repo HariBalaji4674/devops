@@ -1,0 +1,11 @@
+- name: Looping numbers
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Printing Loops
+      debug:
+        msg: "{{item.name}}"
+      with_items:
+        - { name: 'Hari', Course: 'Devops'}
+        - { name: 'Vardhan', Course: 'Java'}
+        - { name: 'Reddy', Course: 'Python'}

@@ -1,0 +1,7 @@
+- name: I am Taking from Varibales from inventory file 
+  hosts: nginx
+  become: yes
+  tasks:
+  - name: taking the username from inventory
+    ansible.builtin.debug:
+      msg: " I am Taking from inventory file varibales {{nginx_username}} "
