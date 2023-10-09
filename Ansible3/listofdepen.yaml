@@ -1,5 +1,0 @@
-- name: Optimal yum
-  hosts: localhost
-  ansible.builtin.yum:
-    name: "{{ list_of_packages }}"
-    state: present
