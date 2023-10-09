@@ -1,6 +1,0 @@
-#Adding Host to to the recentluy added file
-- name: Add Host Ip address to the recent created file
-  ansible.builtin.add_host:
-    name: '{{172.31.33.33}}'
-    groups: just_created
-    foo: 42

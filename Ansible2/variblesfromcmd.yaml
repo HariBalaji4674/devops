@@ -1,6 +1,0 @@
-- name: This is taking vales from cmd
-  hosts: localhost
-  tasks:
-  - name: Take the varibles from cmd
-    ansible.builtin.debug:
-      msg: This is variables from command line {{NAME}}
